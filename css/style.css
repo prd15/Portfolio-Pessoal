@@ -745,7 +745,22 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .stat-card .num { font-size: 1.5rem; font-weight: 900; color: var(--slate-100); }
 .stat-card .lbl { font-size: 0.72rem; color: var(--slate-500); }
 
-/* Título de página interna (sobre/projetos/contato) */
+/* Página de currículo: espaçamento entre barras de habilidade */
+.skill-row { margin-bottom: 18px; }
+
+/* Grade de cartões (ferramentas, metodologias, idiomas) */
+.cv-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.cv-card__title {
+  color: var(--slate-100);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+/* Título de página interna (sobre/projetos/curriculo/contato) */
 .page-hero {
   padding: 130px 0 20px;
   text-align: center;
@@ -788,6 +803,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 
   .contact-grid { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .cv-cards { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 420px) {

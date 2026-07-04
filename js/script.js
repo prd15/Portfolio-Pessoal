@@ -97,9 +97,11 @@ $(function () {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
 
-          // Se a seção contém a barra de linguagem, dispara a animação dela.
-          var bar = entry.target.querySelector('.lang-bar__fill');
-          if (bar) { bar.style.width = bar.getAttribute('data-width') || '100%'; }
+          // Se a seção contém barras de progresso, anima todas (linguagem/skills).
+          var bars = entry.target.querySelectorAll('.lang-bar__fill');
+          bars.forEach(function (bar) {
+            bar.style.width = bar.getAttribute('data-width') || '100%';
+          });
 
           observer.unobserve(entry.target); // anima só uma vez
         }
