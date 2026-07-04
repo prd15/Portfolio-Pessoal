@@ -68,6 +68,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Remove o flash/caixa azul de toque no mobile (iOS/Android) */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -489,11 +491,16 @@ main { position: relative; z-index: 1; }
 .timeline {
   position: relative;
   margin-top: 10px;
+  /* Marcadores numéricos controlados via CSS counter (não pelo <ol> padrão),
+     que vazavam pela esquerda da tela no mobile. Assim o número fica sempre
+     dentro do item — mesmo layout em PC e celular. */
+  list-style: none;
+  counter-reset: tl;
 }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 7px;
+  left: 31px;
   top: 6px;
   bottom: 6px;
   width: 1px;
@@ -501,13 +508,27 @@ main { position: relative; z-index: 1; }
 }
 .timeline__item {
   position: relative;
-  padding-left: 34px;
+  padding-left: 58px;
   margin-bottom: 28px;
+  counter-increment: tl;
+}
+/* Número da etapa (1. 2. 3.) — ancorado à esquerda, dentro do item */
+.timeline__item::after {
+  content: counter(tl) '.';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--slate-500);
 }
 .timeline__item::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 24px;
   top: 4px;
   width: 15px;
   height: 15px;
@@ -800,8 +821,14 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   }
   .nav__links.open { max-height: 320px; }
   .nav__links a {
+    /* block evita que caixas inline se sobreponham verticalmente
+       (o padding não conta no layout de inline → hitboxes bugadas,
+       tocava num link e ativava o vizinho). Agora cada link é uma
+       linha própria, com área de toque cheia e sem sobreposição. */
+    display: block;
     padding: 16px 24px;
     width: 100%;
+    text-align: center;
     border-top: 1px solid rgba(26, 26, 46, 0.6);
   }
 
