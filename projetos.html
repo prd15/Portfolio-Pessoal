@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ===== Meta básicas / SEO ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Pedro Fernandes</title>
+  <meta name="description" content="Projetos desenvolvidos por Pedro Fernandes, incluindo o Finance Control — um PWA de gestão financeira feito com Next.js, Supabase e PostgreSQL.">
+  <meta name="keywords" content="Pedro Fernandes, projetos, portfólio, Finance Control, Next.js, Supabase, PostgreSQL, PWA">
+  <meta name="author" content="Pedro Fernandes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prd15.github.io/portifolio/projetos.html">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projetos | Pedro Fernandes">
+  <meta property="og:description" content="Projetos desenvolvidos por Pedro Fernandes, incluindo o Finance Control.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ===== Cabeçalho / Navegação ===== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav__brand">~/prd15</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Título da página ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="gradient-text">Projetos</h1>
+        <p>Coisas que construí para aprender e resolver problemas reais.</p>
+      </div>
+    </section>
+
+    <!-- ===== Lista de projetos ===== -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="projects-grid">
+
+          <!-- Projeto 1 -->
+          <article class="glass-card">
+            <div class="project__head">
+              <div class="project__title">
+                <span class="emoji" aria-hidden="true">💰</span>
+                <h3>Finance Control</h3>
+                <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/prd15/FinanceControl" target="_blank" rel="noopener noreferrer" class="btn" style="padding:6px 12px;font-size:0.75rem;">GitHub</a>
+                <a href="https://financecontrol.online" target="_blank" rel="noopener noreferrer" class="btn btn--cyan" style="padding:6px 12px;font-size:0.75rem;">Ver site ↗</a>
+              </div>
+            </div>
+            <p class="project__desc">
+              PWA de gestão financeira pessoal — controle receitas, despesas e metas
+              financeiras com suporte offline.
+            </p>
+            <div class="project__stack">
+              <span>Next.js</span><span>TypeScript</span><span>Supabase</span>
+              <span>PostgreSQL</span><span>Tailwind CSS</span><span>Vercel</span>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="glass-card">
+            <div class="project__head">
+              <div class="project__title">
+                <span class="emoji" aria-hidden="true">🏥</span>
+                <h3>Clínica Médica</h3>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/prd15/clinica-medica" target="_blank" rel="noopener noreferrer" class="btn" style="padding:6px 12px;font-size:0.75rem;">GitHub</a>
+              </div>
+            </div>
+            <p class="project__desc">
+              Sistema de gestão para clínica médica em arquitetura de microsserviços
+              (módulos administrativo e de agendamento), com autenticação via Keycloak,
+              comunicação entre serviços com OpenFeign, documentação Swagger e deploy
+              containerizado com Docker.
+            </p>
+            <div class="project__stack">
+              <span>Java</span><span>Spring Boot</span><span>Keycloak</span>
+              <span>OpenFeign</span><span>Swagger</span><span>Docker</span>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="glass-card">
+            <div class="project__head">
+              <div class="project__title">
+                <span class="emoji" aria-hidden="true">🎓</span>
+                <h3>API Student</h3>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/prd15/api-student" target="_blank" rel="noopener noreferrer" class="btn" style="padding:6px 12px;font-size:0.75rem;">GitHub</a>
+              </div>
+            </div>
+            <p class="project__desc">
+              API REST para cadastro e gerenciamento de estudantes, com CRUD completo
+              seguindo a arquitetura em camadas do Spring Boot (Controller, Service,
+              Repository, Entity) e banco de dados provisionado via Docker Compose.
+            </p>
+            <div class="project__stack">
+              <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span>
+              <span>REST</span><span>Docker</span>
+            </div>
+          </article>
+
+          <!-- Placeholder "em breve" -->
+          <div class="glass-card" style="border-style:dashed;text-align:center;color:var(--slate-600);">
+            <span style="color:rgba(167,139,250,0.5);">+</span> mais projetos chegando em breve...
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="built">Feito com <span class="p">HTML5</span> · <span class="c">CSS3</span> · <span class="p">JavaScript</span> · <span class="c">jQuery</span></p>
+    <p class="copy">&copy; <span id="year">2026</span> Pedro Fernandes</p>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

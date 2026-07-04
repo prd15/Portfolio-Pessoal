@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ===== Meta básicas / SEO ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre | Pedro Fernandes</title>
+  <meta name="description" content="Conheça Pedro Fernandes: desenvolvedor backend em formação, focado em Java, Spring Boot e modelagem de bancos de dados. Veja sua jornada e trajetória.">
+  <meta name="keywords" content="Pedro Fernandes, sobre, desenvolvedor backend, Java, Spring Boot, trajetória, jornada">
+  <meta name="author" content="Pedro Fernandes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prd15.github.io/portifolio/sobre.html">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Sobre | Pedro Fernandes">
+  <meta property="og:description" content="Desenvolvedor backend em formação, focado em Java e Spring Boot.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ===== Cabeçalho / Navegação ===== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav__brand">~/prd15</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Título da página ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="gradient-text">Sobre mim</h1>
+        <p>Um pouco da minha trajetória e do que gosto de construir.</p>
+      </div>
+    </section>
+
+    <!-- ===== whoami (cartão terminal) ===== -->
+    <section class="section fade-in">
+      <div class="container">
+        <article class="terminal-card">
+          <div class="terminal-card__header">
+            <span class="terminal-dot" style="background:#ff5f57;"></span>
+            <span class="terminal-dot" style="background:#ffbd2e;"></span>
+            <span class="terminal-dot" style="background:#28ca41;"></span>
+            <span class="label">bash — ~/sobre</span>
+          </div>
+          <div class="terminal-card__body">
+            <p class="cmd">whoami</p>
+            <p class="about-text">
+              Um builder. Atualmente estudando <span class="hl">Engenharia de Software</span> e
+              <span class="hl">Análise e Desenvolvimento de Sistemas</span>, focado em desenvolvimento
+              backend com <span class="hl-cyan">Java</span>.
+            </p>
+            <ul class="bullet-list">
+              <li>Construindo aplicações backend e APIs REST com <span class="hl-cyan">Java + Spring Boot</span></li>
+              <li>Projetando e modelando bancos de dados com <span class="hl-cyan">MySQL &amp; PostgreSQL</span></li>
+              <li>Construindo produtos full-stack com <span class="hl-cyan">Next.js + Supabase</span></li>
+              <li>Desenvolvendo projetos pessoais — <span class="hl-cyan">aprendendo na prática</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- ===== Linha do tempo ===== -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="section-label"><h2>jornada</h2><span></span></div>
+
+        <ol class="timeline">
+          <li class="timeline__item current">
+            <span class="timeline__period">2024 → presente</span><span class="timeline__now">NOW</span>
+            <h3 class="timeline__title">Engenharia de Software</h3>
+            <p class="timeline__place">Bacharelado</p>
+            <div class="tags"><span>Java</span><span>Algoritmos</span><span>POO</span></div>
+          </li>
+          <li class="timeline__item current">
+            <span class="timeline__period">2024 → presente</span><span class="timeline__now">NOW</span>
+            <h3 class="timeline__title">Análise e Desenvolvimento de Sistemas</h3>
+            <p class="timeline__place">Tecnólogo</p>
+            <div class="tags"><span>Backend</span><span>Bancos de Dados</span><span>APIs</span></div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__period">2025</span>
+            <h3 class="timeline__title">Finance Control no ar</h3>
+            <p class="timeline__place">Primeiro SaaS pessoal · financecontrol.online</p>
+            <div class="tags"><span>Next.js</span><span>Supabase</span><span>PWA</span></div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__period">2023</span>
+            <h3 class="timeline__title">Primeiras linhas de código</h3>
+            <p class="timeline__place">Programação autodidata — fundamentos de Java</p>
+            <div class="tags"><span>Java</span><span>Aprendizado</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- ===== Estatísticas + barra de linguagem (animada) ===== -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="section-label"><h2>números</h2><span></span></div>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="icon">⬡</div><div class="num">300+</div><div class="lbl">Commits (último ano)</div></div>
+          <div class="stat-card"><div class="icon">⎄</div><div class="num">20+</div><div class="lbl">Pull Requests</div></div>
+          <div class="stat-card"><div class="icon">◈</div><div class="num">5+</div><div class="lbl">Repositórios</div></div>
+          <div class="stat-card"><div class="icon">✦</div><div class="num">2+</div><div class="lbl">Anos estudando</div></div>
+        </div>
+
+        <div class="glass-card">
+          <div class="lang-bar-head">
+            <span>Linguagem mais usada</span>
+            <span class="val">Java · 100%</span>
+          </div>
+          <!-- data-width é lido pelo JS para animar a largura ao aparecer -->
+          <div class="lang-bar"><div class="lang-bar__fill" data-width="100%"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="built">Feito com <span class="p">HTML5</span> · <span class="c">CSS3</span> · <span class="p">JavaScript</span> · <span class="c">jQuery</span></p>
+    <p class="copy">&copy; <span id="year">2026</span> Pedro Fernandes</p>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ===== Meta básicas / SEO ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Pedro Fernandes</title>
+  <meta name="description" content="Entre em contato com Pedro Fernandes. Envie uma mensagem pelo formulário ou conecte-se pelo GitHub e LinkedIn.">
+  <meta name="keywords" content="Pedro Fernandes, contato, e-mail, formulário, LinkedIn, GitHub">
+  <meta name="author" content="Pedro Fernandes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prd15.github.io/portifolio/contato.html">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contato | Pedro Fernandes">
+  <meta property="og:description" content="Entre em contato com Pedro Fernandes pelo formulário, GitHub ou LinkedIn.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ===== Cabeçalho / Navegação ===== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav__brand">~/prd15</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Título da página ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="gradient-text">Contato</h1>
+        <p>Tem uma ideia, oportunidade ou só quer trocar uma ideia? Me chame.</p>
+      </div>
+    </section>
+
+    <!-- ===== Bloco de contato ===== -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Coluna de informações -->
+          <div class="contact-info">
+            <p>Respondo o mais rápido possível. Prefere redes? Estou por aqui:</p>
+            <div class="info-item"><span class="k">email:</span>
+              <a href="mailto:pedrohenriquesilva.phf@gmail.com" style="color:var(--cyan-light);">pedrohenriquesilva.phf@gmail.com</a>
+            </div>
+            <div class="info-item"><span class="k">github:</span>
+              <a href="https://github.com/prd15" target="_blank" rel="noopener noreferrer" style="color:var(--cyan-light);">@prd15</a>
+            </div>
+            <div class="info-item"><span class="k">linkedin:</span>
+              <a href="https://www.linkedin.com/in/pedro-henrique-fernandes-dev" target="_blank" rel="noopener noreferrer" style="color:var(--cyan-light);">pedro-henrique-fernandes-dev</a>
+            </div>
+            <div class="info-item"><span class="k">local:</span> Brasil · remoto</div>
+          </div>
+
+          <!-- Formulário com validação via JavaScript -->
+          <div class="glass-card">
+            <!-- novalidate: desativa a validação nativa para usarmos a nossa em JS -->
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="nome">Nome <span class="req">*</span></label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" autocomplete="name">
+                <span class="error-message" id="err-nome"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="voce@email.com" autocomplete="email">
+                <span class="error-message" id="err-email"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Mensagem <span class="req">*</span></label>
+                <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Escreva sua mensagem (mín. 10 caracteres)"></textarea>
+                <span class="error-message" id="err-mensagem"></span>
+              </div>
+
+              <button type="submit" class="btn" style="width:100%;justify-content:center;">Enviar mensagem</button>
+
+              <!-- Mensagem de sucesso exibida via JS -->
+              <div class="form-success" id="form-success" role="status">
+                ✓ Mensagem enviada com sucesso! Retornarei em breve.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="built">Feito com <span class="p">HTML5</span> · <span class="c">CSS3</span> · <span class="p">JavaScript</span> · <span class="c">jQuery</span></p>
+    <p class="copy">&copy; <span id="year">2026</span> Pedro Fernandes</p>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
